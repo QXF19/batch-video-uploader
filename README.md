@@ -8,7 +8,7 @@
 
 ## 下载 Windows 桌面版
 
-前往 [GitHub Releases](https://github.com/QXF19/qxf-video/releases) 下载最新版 `批量视频上传-Setup-*-x64.exe`。安装包支持 64 位 Windows 10 与 Windows 11，安装后会创建开始菜单和桌面快捷方式。
+前往 [GitHub Releases](https://github.com/QXF19/qxf-video/releases) 下载最新版 `QXF-Video-Setup-*-x64.exe`。安装包支持 64 位 Windows 10 与 Windows 11，安装后会创建开始菜单和桌面快捷方式。
 
 桌面版采用独立窗口、原生窗口控制、单实例运行和安全隔离设计。由于当前发行版尚未购买商业代码签名证书，Windows SmartScreen 可能显示“未知发布者”，可在确认下载来源为本仓库后继续安装。
 

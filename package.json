@@ -24,7 +24,7 @@
     "appId": "cn.qxf.batchvideouploader",
     "productName": "批量视频上传",
     "copyright": "Copyright © 2026 QXF19",
-    "artifactName": "批量视频上传-Setup-${version}-${arch}.${ext}",
+    "artifactName": "QXF-Video-Setup-${version}-${arch}.${ext}",
     "directories": {
       "output": "release",
       "buildResources": "build"
