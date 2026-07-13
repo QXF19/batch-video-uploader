@@ -1,0 +1,16 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="92" y1="56" x2="430" y2="466" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#887BFF"/><stop offset="0.48" stop-color="#6758EA"/><stop offset="1" stop-color="#4634C6"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="166" y1="132" x2="356" y2="386" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/><stop offset="1" stop-color="#E9E5FF"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="448" height="448" rx="112" fill="url(#bg)"/>
+  <circle cx="138" cy="127" r="94" fill="white" fill-opacity="0.08"/>
+  <path d="M153 331V257C153 239.3 167.3 225 185 225C202.7 225 217 239.3 217 257V331C217 348.7 202.7 363 185 363C167.3 363 153 348.7 153 331Z" fill="url(#shine)" fill-opacity="0.76"/>
+  <path d="M224 331V173C224 155.3 238.3 141 256 141C273.7 141 288 155.3 288 173V331C288 348.7 273.7 363 256 363C238.3 363 224 348.7 224 331Z" fill="url(#shine)"/>
+  <path d="M295 331V215C295 197.3 309.3 183 327 183C344.7 183 359 197.3 359 215V331C359 348.7 344.7 363 327 363C309.3 363 295 348.7 295 331Z" fill="url(#shine)" fill-opacity="0.88"/>
+  <path d="M132 385C198 414 306 416 380 374" stroke="white" stroke-opacity="0.32" stroke-width="16" stroke-linecap="round"/>
+</svg>
