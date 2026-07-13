@@ -1,0 +1,10 @@
+{
+  "name": "流量舱 · 多平台发布工作台",
+  "short_name": "流量舱",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f6fa",
+  "theme_color": "#6557ea",
+  "lang": "zh-CN",
+  "icons": []
+}

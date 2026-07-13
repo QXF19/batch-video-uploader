@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f4f7fb" />
+  <meta name="description" content="面向内容团队的多平台视频发布工作台" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>流量舱 · 多平台发布工作台</title>
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v9a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4zM22 2 11 13"/></symbol>
+    <symbol id="i-accounts" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v2M16 3.2a4 4 0 0 1 0 7.6M19 13a5 5 0 0 1 3 4.6V21"/></symbol>
+    <symbol id="i-library" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m8 2v4M16 2v4M3 10h18M10 14l5 3-5 3z"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20V7"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.03 1.56V21h-4v-.08A1.7 1.7 0 0 0 9 19.37a1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.63 15a1.7 1.7 0 0 0-1.55-1H3v-4h.08A1.7 1.7 0 0 0 4.63 9a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.63h.01A1.7 1.7 0 0 0 10 3.08V3h4v.08A1.7 1.7 0 0 0 15 4.63a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.37 9v.01A1.7 1.7 0 0 0 20.92 10H21v4h-.08A1.7 1.7 0 0 0 19.4 15z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4m0 0L7 9m5-5 5 5M5 20h14"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
+    <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-wand" viewBox="0 0 24 24"><path d="m15 4 5 5L9 20H4v-5zM14 5l5 5M5 4v4M3 6h4M18 16v5M15.5 18.5h5"/></symbol>
+  </svg>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><span></span><span></span><span></span></div>
+        <div><strong>流量舱</strong><small>PublishFlow</small></div>
+      </div>
+
+      <nav class="nav-list" aria-label="主导航">
+        <button class="nav-item active" data-view="dashboard"><svg><use href="#i-home"/></svg><span>工作台</span></button>
+        <button class="nav-item" data-view="publish"><svg><use href="#i-send"/></svg><span>发布任务</span><b>3</b></button>
+        <button class="nav-item" data-view="accounts"><svg><use href="#i-accounts"/></svg><span>账号矩阵</span></button>
+        <button class="nav-item" data-view="library"><svg><use href="#i-library"/></svg><span>素材中心</span></button>
+        <button class="nav-item" data-view="analytics"><svg><use href="#i-chart"/></svg><span>数据复盘</span></button>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <div class="quota-card">
+        <div class="quota-icon">◆</div>
+        <strong>专业版</strong>
+        <span>本月已发布 126 / 500</span>
+        <div class="quota-track"><i></i></div>
+        <button>管理套餐</button>
+      </div>
+      <button class="nav-item settings"><svg><use href="#i-settings"/></svg><span>系统设置</span></button>
+      <div class="profile">
+        <div class="avatar">林</div>
+        <div><strong>林小满</strong><small>内容运营</small></div>
+        <svg><use href="#i-more"/></svg>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1>早上好，林小满 <span>👋</span></h1>
+          <p>把好内容，一次送到每个平台。</p>
+        </div>
+        <div class="top-actions">
+          <label class="search"><svg><use href="#i-search"/></svg><input id="globalSearch" placeholder="搜索任务、素材或账号" /></label>
+          <button class="icon-button notification" title="通知"><svg><use href="#i-bell"/></svg><i></i></button>
+          <button class="primary-button" id="newPublish"><svg><use href="#i-plus"/></svg>新建发布</button>
+        </div>
+      </header>
+
+      <section class="content view active" id="dashboardView">
+        <div class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-icon purple"><svg><use href="#i-send"/></svg></div>
+            <div class="stat-copy"><span>本月发布</span><strong>126</strong><small><em>↑ 18.6%</em> 较上月</small></div>
+            <div class="spark bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon cyan"><svg><use href="#i-chart"/></svg></div>
+            <div class="stat-copy"><span>累计播放</span><strong>328.4<span>万</span></strong><small><em>↑ 24.2%</em> 较上月</small></div>
+            <div class="spark line"><svg viewBox="0 0 120 44"><path d="M2 38C15 35 18 27 30 30s16-15 28-11 13 17 25 8 18-23 35-20"/><path class="fill" d="M2 38C15 35 18 27 30 30s16-15 28-11 13 17 25 8 18-23 35-20V44H2z"/></svg></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon orange"><svg><use href="#i-accounts"/></svg></div>
+            <div class="stat-copy"><span>账号矩阵</span><strong>8</strong><small>覆盖 <em>3 个平台</em></small></div>
+            <div class="platform-stack"><span class="platform dy">音</span><span class="platform ks">快</span><span class="platform bi">B</span></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon green"><svg><use href="#i-clock"/></svg></div>
+            <div class="stat-copy"><span>待发布</span><strong id="pendingCount">3</strong><small>最近 <em>今天 18:30</em></small></div>
+            <button class="soft-button" data-go-publish>查看队列</button>
+          </article>
+        </div>
+
+        <div class="workspace-grid">
+          <section class="panel quick-publish">
+            <div class="panel-heading">
+              <div><h2>快速发布</h2><p>一次上传，智能适配多个平台</p></div>
+              <span class="draft-pill">草稿自动保存</span>
+            </div>
+
+            <div class="stepper">
+              <div class="step active"><b>1</b><span>上传视频</span></div><i></i>
+              <div class="step"><b>2</b><span>完善内容</span></div><i></i>
+              <div class="step"><b>3</b><span>选择平台</span></div>
+            </div>
+
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="选择视频文件">
+              <input type="file" id="videoInput" accept="video/mp4,video/quicktime,video/x-matroska" multiple hidden />
+              <div class="upload-visual"><svg><use href="#i-upload"/></svg><i>+</i></div>
+              <h3>拖拽视频到这里，或 <button id="browseFile">选择文件</button></h3>
+              <p>支持 MP4、MOV、MKV · 单个最大 8GB · 最多 20 个视频</p>
+            </div>
+
+            <div class="file-list" id="fileList" hidden></div>
+
+            <div class="platform-picker">
+              <div class="picker-title"><strong>发布到</strong><span>已选择 <b id="selectedPlatformCount">3</b> 个平台</span></div>
+              <div class="platform-options">
+                <button class="platform-option selected" data-platform="抖音"><span class="platform dy">音</span><div><strong>抖音</strong><small>竖版 9:16</small></div><i><svg><use href="#i-check"/></svg></i></button>
+                <button class="platform-option selected" data-platform="快手"><span class="platform ks">快</span><div><strong>快手</strong><small>竖版 9:16</small></div><i><svg><use href="#i-check"/></svg></i></button>
+                <button class="platform-option selected" data-platform="哔哩哔哩"><span class="platform bi">B</span><div><strong>哔哩哔哩</strong><small>横版 16:9</small></div><i><svg><use href="#i-check"/></svg></i></button>
+              </div>
+            </div>
+
+            <div class="quick-footer">
+              <div class="ai-note"><svg><use href="#i-wand"/></svg><div><strong>智能适配已开启</strong><span>自动裁剪画面、生成标题与话题标签</span></div></div>
+              <button class="primary-button wide" id="continuePublish">继续完善内容 <svg><use href="#i-chevron"/></svg></button>
+            </div>
+          </section>
+
+          <aside class="right-column">
+            <section class="panel account-panel">
+              <div class="panel-heading compact"><div><h2>账号状态</h2><p><i class="online-dot"></i> 8 个账号运行正常</p></div><button class="link-button" data-view-target="accounts">管理账号</button></div>
+              <div class="account-list" id="accountList">
+                <div class="account-row"><div class="account-avatar sunset">旅</div><div><strong>旅行研究所</strong><small><span class="platform-mini dy">音</span> 抖音 · 82.6万粉丝</small></div><span class="status ok">正常</span></div>
+                <div class="account-row"><div class="account-avatar blue">科</div><div><strong>小满的科技频道</strong><small><span class="platform-mini bi">B</span> 哔哩哔哩 · 35.1万粉丝</small></div><span class="status ok">正常</span></div>
+                <div class="account-row"><div class="account-avatar violet">食</div><div><strong>人间食味</strong><small><span class="platform-mini ks">快</span> 快手 · 19.8万粉丝</small></div><span class="status warn">7天后过期</span></div>
+              </div>
+              <button class="add-account" id="addAccount"><svg><use href="#i-plus"/></svg> 添加平台账号</button>
+            </section>
+
+            <section class="panel schedule-panel">
+              <div class="panel-heading compact"><div><h2>发布日程</h2><p>7月 13日 — 7月 19日</p></div><button class="icon-button"><svg><use href="#i-more"/></svg></button></div>
+              <div class="week-row"><span><b>一</b><i>13</i></span><span><b>二</b><i>14</i></span><span class="active"><b>三</b><i>15</i><em></em></span><span><b>四</b><i>16</i><em></em></span><span><b>五</b><i>17</i></span><span><b>六</b><i>18</i><em></em></span><span><b>日</b><i>19</i></span></div>
+              <div class="schedule-list">
+                <div class="schedule-item"><time>18:30</time><i class="purple-line"></i><div><strong>夏日自驾路线推荐</strong><span><b class="platform-mini dy">音</b><b class="platform-mini ks">快</b> 2个平台</span></div><em>待发布</em></div>
+                <div class="schedule-item"><time>20:00</time><i class="blue-line"></i><div><strong>新款相机深度测评</strong><span><b class="platform-mini bi">B</b> 哔哩哔哩</span></div><em>待发布</em></div>
+              </div>
+              <button class="calendar-button" data-go-publish>查看完整日历 <svg><use href="#i-chevron"/></svg></button>
+            </section>
+          </aside>
+        </div>
+
+        <section class="panel recent-panel">
+          <div class="panel-heading compact"><div><h2>最近发布</h2><p>追踪视频在各平台的实时表现</p></div><button class="link-button" data-view-target="analytics">查看全部</button></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>内容</th><th>发布平台</th><th>发布时间</th><th>状态</th><th>播放量</th><th>互动</th><th></th></tr></thead>
+              <tbody id="recentTable">
+                <tr><td><div class="video-cell"><div class="thumb thumb-one"><span>01:28</span></div><div><strong>藏在江南小城里的夏天</strong><small>城市漫游系列 Vol.08</small></div></div></td><td><div class="platform-stack small"><span class="platform dy">音</span><span class="platform ks">快</span><span class="platform bi">B</span></div></td><td><strong>今天 09:30</strong><small>3小时前</small></td><td><span class="publish-status live"><i></i>已发布</span></td><td><strong>12.8万</strong><small class="up">↑ 18.2%</small></td><td><strong>8,429</strong><small>6.6% 互动率</small></td><td><button class="icon-button"><svg><use href="#i-more"/></svg></button></td></tr>
+                <tr><td><div class="video-cell"><div class="thumb thumb-two"><span>03:42</span></div><div><strong>2026 年轻薄本怎么选</strong><small>数码选购指南</small></div></div></td><td><div class="platform-stack small"><span class="platform dy">音</span><span class="platform bi">B</span></div></td><td><strong>昨天 20:00</strong><small>16小时前</small></td><td><span class="publish-status live"><i></i>已发布</span></td><td><strong>8.6万</strong><small class="up">↑ 9.7%</small></td><td><strong>5,218</strong><small>6.1% 互动率</small></td><td><button class="icon-button"><svg><use href="#i-more"/></svg></button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <section class="content view placeholder-view" id="publishView">
+        <div class="view-head"><div><h2>发布任务</h2><p>统一管理正在处理、待发布和已完成的内容</p></div><button class="primary-button" data-new-publish><svg><use href="#i-plus"/></svg>创建任务</button></div>
+        <div class="filter-bar"><button class="active">全部 <b>8</b></button><button>处理中 <b>1</b></button><button>待发布 <b>3</b></button><button>已完成 <b>4</b></button></div>
+        <div class="task-board" id="taskBoard">
+          <article class="task-card featured"><div class="task-preview gradient-a">TRAVEL<small>00:42</small></div><div class="task-info"><div><span class="task-state processing"><i></i>智能适配中 · 68%</span><h3>周末逃离城市计划</h3><p>正在生成抖音竖版与 B 站横版封面</p></div><div class="task-progress"><i style="width:68%"></i></div><div class="task-meta"><div class="platform-stack small"><span class="platform dy">音</span><span class="platform ks">快</span><span class="platform bi">B</span></div><span>预计还需 2 分钟</span></div></div></article>
+          <article class="task-card"><div class="task-preview gradient-b">SUMMER<small>01:16</small></div><div class="task-info"><div><span class="task-state pending"><i></i>定时发布</span><h3>夏日自驾路线推荐</h3><p>今天 18:30</p></div><div class="task-meta"><div class="platform-stack small"><span class="platform dy">音</span><span class="platform ks">快</span></div><button class="soft-button">编辑</button></div></div></article>
+          <article class="task-card"><div class="task-preview gradient-c">CAMERA<small>04:20</small></div><div class="task-info"><div><span class="task-state pending"><i></i>定时发布</span><h3>新款相机深度测评</h3><p>今天 20:00</p></div><div class="task-meta"><div class="platform-stack small"><span class="platform bi">B</span></div><button class="soft-button">编辑</button></div></div></article>
+        </div>
+      </section>
+
+      <section class="content view placeholder-view" id="accountsView">
+        <div class="view-head"><div><h2>账号矩阵</h2><p>集中管理各平台账号的授权状态</p></div><button class="primary-button" id="addAccountTop"><svg><use href="#i-plus"/></svg>扫码添加账号</button></div>
+        <div class="account-grid" id="accountGrid"></div>
+      </section>
+
+      <section class="content view placeholder-view" id="libraryView">
+        <div class="view-head"><div><h2>素材中心</h2><p>所有视频、封面和草稿都在这里</p></div><button class="primary-button" id="libraryUpload"><svg><use href="#i-upload"/></svg>上传素材</button></div>
+        <div class="empty-state"><div class="empty-visual"><svg><use href="#i-library"/></svg></div><h3>把素材集中管理起来</h3><p>拖入视频后，系统会自动读取时长、分辨率并生成封面。</p><button class="primary-button" id="emptyUpload">选择视频</button></div>
+      </section>
+
+      <section class="content view placeholder-view" id="analyticsView">
+        <div class="view-head"><div><h2>数据复盘</h2><p>跨平台看清每条内容的增长趋势</p></div><button class="soft-button">导出报表</button></div>
+        <div class="analytics-hero"><div><span>近 30 天总播放</span><strong>328.4万</strong><em>较上周期 ↑ 24.2%</em></div><svg viewBox="0 0 760 180"><path class="area" d="M0 165C70 150 90 80 160 110S250 155 310 98 400 30 475 75 570 130 630 62 710 23 760 35V180H0Z"/><path d="M0 165C70 150 90 80 160 110S250 155 310 98 400 30 475 75 570 130 630 62 710 23 760 35"/></svg></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="loginModal" hidden>
+    <div class="modal qr-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close-modal><svg><use href="#i-close"/></svg></button>
+      <div class="modal-brand"><div class="brand-mark"><span></span><span></span><span></span></div></div>
+      <h2 id="modalTitle">扫码连接平台账号</h2>
+      <p>选择平台后，使用对应客户端扫码授权</p>
+      <div class="modal-platforms">
+        <button class="selected" data-login-platform="抖音"><span class="platform dy">音</span>抖音</button>
+        <button data-login-platform="快手"><span class="platform ks">快</span>快手</button>
+        <button data-login-platform="哔哩哔哩"><span class="platform bi">B</span>哔哩哔哩</button>
+      </div>
+      <div class="qr-shell"><div id="qrCode" class="qr-code"></div><div class="qr-logo platform dy" id="qrLogo">音</div></div>
+      <strong class="scan-tip">请使用抖音客户端扫码</strong>
+      <span class="security-note">🔒 仅获取发布所需权限，不保存账号密码</span>
+      <div class="demo-notice">演示模式：点击二维码即可模拟扫码成功</div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="editorModal" hidden>
+    <div class="modal editor-modal" role="dialog" aria-modal="true" aria-labelledby="editorTitle">
+      <button class="modal-close" data-close-editor><svg><use href="#i-close"/></svg></button>
+      <div class="editor-head"><span class="eyebrow">第 2 步，共 3 步</span><h2 id="editorTitle">完善发布内容</h2><p>已为不同平台生成建议内容，可分别调整。</p></div>
+      <label class="field"><span>统一标题 <b>18 / 30</b></span><input id="postTitle" maxlength="30" value="周末逃离城市计划｜这条路线太治愈了" /></label>
+      <label class="field"><span>视频简介</span><textarea id="postDescription" rows="4">沿着这条小众路线出发，山风、湖泊和日落都刚刚好。收藏起来，下个周末就出发！</textarea></label>
+      <div class="tag-row"><span>#周末去哪儿</span><span>#旅行攻略</span><span>#治愈系风景</span><button>+ 添加话题</button></div>
+      <div class="required-grid">
+        <label class="field"><span>内容类型 <em>必填</em></span><select id="contentType" required><option value="原创">原创内容</option><option value="转载">转载内容</option></select></label>
+        <label class="field"><span>内容分区 <em>必填</em></span><select id="postCategory" required><option value="">请选择分区</option><option>生活 / 日常</option><option>旅行 / 出行</option><option>知识 / 科普</option><option>科技 / 数码</option><option>美食 / 探店</option><option>游戏 / 娱乐</option></select></label>
+        <label class="field"><span>可见范围 <em>必填</em></span><select id="visibility" required><option value="公开">公开</option><option value="仅自己可见">仅自己可见</option><option value="粉丝可见">粉丝可见</option></select></label>
+        <label class="field cover-field"><span>视频封面 <em>必填</em></span><button type="button" id="selectCover"><i id="coverPreview">＋</i><b id="coverName">选择 JPG / PNG 封面</b></button><input type="file" id="coverInput" accept="image/jpeg,image/png" hidden /></label>
+      </div>
+      <label class="rights-check"><input type="checkbox" id="rightsConfirm" /><span>我确认拥有该视频、音乐和封面的发布权利，并遵守所选平台社区规范。 <em>必选</em></span></label>
+      <div class="publish-mode"><label><input type="radio" name="mode" value="now" checked /><span><b>立即发布</b><small>适配完成后立即发布</small></span></label><label><input type="radio" name="mode" value="schedule" /><span><b>定时发布</b><small>选择统一发布时间</small></span></label></div>
+      <div class="schedule-fields" id="scheduleFields" hidden><label class="field"><span>发布日期</span><input type="date" id="publishDate" /></label><label class="field"><span>时间</span><input type="time" id="publishTime" value="18:30" /></label></div>
+      <div class="editor-footer"><button class="ghost-button" data-close-editor>返回</button><button class="primary-button" id="submitTask">创建发布任务 <svg><use href="#i-send"/></svg></button></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="relayModal" hidden>
+    <div class="modal relay-modal" role="dialog" aria-modal="true" aria-labelledby="relayTitle">
+      <button class="modal-close" data-close-relay><svg><use href="#i-close"/></svg></button>
+      <div class="editor-head"><span class="eyebrow">官方发布接力</span><h2 id="relayTitle">内容信息已准备完成</h2><p>逐个平台打开官方上传界面，粘贴已整理的信息并选择本地视频。最终发布前仍由你确认。</p></div>
+      <div class="relay-summary"><span><svg><use href="#i-check"/></svg> 标题</span><span><svg><use href="#i-check"/></svg> 简介与话题</span><span><svg><use href="#i-check"/></svg> 分区与可见范围</span><span><svg><use href="#i-check"/></svg> 封面</span></div>
+      <div class="relay-list">
+        <article data-relay-platform="抖音"><span class="platform dy">音</span><div><strong>抖音创作者中心</strong><small>已按竖版短视频规则整理内容</small></div><button class="primary-button relay-open" data-url="https://creator.douyin.com/creator-micro/content/upload">复制信息并打开</button></article>
+        <article data-relay-platform="快手"><span class="platform ks">快</span><div><strong>快手创作者服务平台</strong><small>已按快手作品发布规则整理内容</small></div><button class="primary-button relay-open" data-url="https://cp.kuaishou.com/article/publish/video?tabType=3">复制信息并打开</button></article>
+        <article data-relay-platform="哔哩哔哩"><span class="platform bi">B</span><div><strong>哔哩哔哩创作中心</strong><small>已按视频投稿规则整理内容</small></div><button class="primary-button relay-open" data-url="https://member.bilibili.com/platform/upload/video/frame">复制信息并打开</button></article>
+      </div>
+      <div class="relay-safety"><strong>为什么仍需手动确认？</strong><span>平台页面禁止第三方网页注入文件和账号信息。保留这一步能避免误发，也不会绕过验证码或平台风控。</span></div>
+      <div class="editor-footer"><button class="ghost-button" data-close-relay>稍后处理</button><button class="primary-button" id="finishRelay">全部完成</button></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"><i><svg><use href="#i-check"/></svg></i><div><strong>操作成功</strong><span>内容已经更新</span></div></div>
+  <script src="./app.js"></script>
+</body>
+</html>
